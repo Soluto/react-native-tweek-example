@@ -14,11 +14,6 @@ export default class ReactNativeTweekExample extends Component {
   }
 
   async componentWillMount() {
-      //await AsyncStorage.clear();
-      // AsyncStorage.getItem("configurationSet").then(s => {
-      //   console.log(JSON.parse(s))
-      //   return JSON.parse(s)
-      // })
       const client = createTweekClient("https://tweek.mysoluto.com/configurations")
       let store = {
           save: (nodes) => {

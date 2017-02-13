@@ -9,7 +9,7 @@
   "dependencies": {
     "@npmsoluto/tweek-repo": "^0.1.6",
     "@npmsoluto/tweek-rest": "^0.1.1",
-    "@npmsoluto/react-tweek": "^0.1.0",
+    "@npmsoluto/react-tweek": "^0.2.0",
     "humps": "^2.0.0",
     "react": "15.4.2",
     "react-native": "0.41.2"

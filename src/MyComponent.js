@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-import {mapTweekToProps} from '@npmsoluto/react-tweek';
+import {withTweekKeys} from '@npmsoluto/react-tweek';
 
 const MyComponent = (props) => {
     const {shouldmultiplex = "waiting..."} = props;
@@ -17,4 +17,4 @@ const MyComponent = (props) => {
     )
 }
 
-export default mapTweekToProps("legacy/mobileremote/_")(MyComponent);
+export default withTweekKeys("legacy/mobileremote/_")(MyComponent);
