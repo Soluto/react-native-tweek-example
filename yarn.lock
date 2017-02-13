@@ -2,9 +2,11 @@
 # yarn lockfile v1
 
 
-"@npmsoluto/react-tweek@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@npmsoluto/react-tweek/-/react-tweek-0.2.0.tgz#c4babcd27837f08d5c9e4fe0d6751ef51475a99b"
+"@npmsoluto/react-tweek@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@npmsoluto/react-tweek/-/react-tweek-0.2.1.tgz#fecd7bfd3df981cdaa5cbf6c7543bb1e714a5329"
+  dependencies:
+    humps "^2.0.0"
 
 "@npmsoluto/tweek-repo@^0.1.6":
   version "0.1.6"
@@ -1751,6 +1753,10 @@ http-signature@~1.1.0:
     assert-plus "^0.2.0"
     jsprim "^1.2.2"
     sshpk "^1.7.0"
+
+humps@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/humps/-/humps-2.0.0.tgz#dd4a423e9784626fe7b9f19fde0baff659b40173"
 
 iconv-lite@0.4.11:
   version "0.4.11"
