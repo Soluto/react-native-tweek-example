@@ -2,11 +2,20 @@
 # yarn lockfile v1
 
 
-"@npmsoluto/tweek-js-repo@file:../tweek-clients/js/tweek-repo":
+"@npmsoluto/react-tweek@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@npmsoluto/react-tweek/-/react-tweek-0.2.0.tgz#c4babcd27837f08d5c9e4fe0d6751ef51475a99b"
+
+"@npmsoluto/tweek-repo@^0.1.6":
   version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@npmsoluto/tweek-repo/-/tweek-repo-0.1.6.tgz#17273e1130cc91878197832f1c37ac4788cb1ee5"
   dependencies:
     object.entries "^1.0.4"
     object.values "^1.0.4"
+
+"@npmsoluto/tweek-rest@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@npmsoluto/tweek-rest/-/tweek-rest-0.1.1.tgz#1122197ca3a0d45bdbc88adb8fbcdb80370a2173"
 
 abab@^1.0.3:
   version "1.0.3"
@@ -1742,10 +1751,6 @@ http-signature@~1.1.0:
     assert-plus "^0.2.0"
     jsprim "^1.2.2"
     sshpk "^1.7.0"
-
-humps@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/humps/-/humps-2.0.0.tgz#dd4a423e9784626fe7b9f19fde0baff659b40173"
 
 iconv-lite@0.4.11:
   version "0.4.11"
