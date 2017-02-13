@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@npmsoluto/tweek-js-repo": "^0.1.6",
+    "@npmsoluto/tweek-repo": "^0.1.6",
     "@npmsoluto/tweek-rest": "^0.1.1",
     "@npmsoluto/react-tweek": "^0.1.0",
     "humps": "^2.0.0",

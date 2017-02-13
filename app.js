@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, AsyncStorage} from 'react-native';
 
 import {createTweekClient} from "@npmsoluto/tweek-rest";
-import TweekRepository from "@npmsoluto/tweek-js-repo";
+import TweekRepository from "@npmsoluto/tweek-repo";
 import {connect} from "@npmsoluto/react-tweek";
 
 import MyComponent from './src/MyComponent';
@@ -13,10 +13,28 @@ export default class ReactNativeTweekExample extends Component {
       this.state = {};
   }
 
-  componentWillMount() {
-      const tweekRestClient = createTweekClient("https://tweek.mysoluto.com/configurations")
-      const tweekRepository = new TweekRepository({client: tweekRestClient});
-      connect(tweekRepository).then(() => this.setState({isReady: true}));
+  async componentWillMount() {
+      //await AsyncStorage.clear();
+      // AsyncStorage.getItem("configurationSet").then(s => {
+      //   console.log(JSON.parse(s))
+      //   return JSON.parse(s)
+      // })
+      const client = createTweekClient("https://tweek.mysoluto.com/configurations")
+      let store = {
+          save: (nodes) => {
+            console.log("saving nodes", nodes)          
+            return AsyncStorage.setItem("tweek_cache", JSON.stringify(nodes))
+          },          
+          load: () => AsyncStorage.getItem("tweek_cache").then(s => {
+              console.log("loading nodes", JSON.parse(s))
+              return JSON.parse(s);
+          })
+      }
+      const tweekRepository = new TweekRepository({client, store});
+
+      tweekRepository.init()
+        .then(() => connect(tweekRepository))
+        .then(() => this.setState({isReady: true}));
   }
 
   render() {
@@ -34,7 +52,7 @@ export default class ReactNativeTweekExample extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'center', 
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
