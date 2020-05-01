@@ -4,14 +4,17 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@npmsoluto/tweek-repo": "^0.1.6",
     "@npmsoluto/tweek-rest": "^0.1.1",
     "@npmsoluto/react-tweek": "^0.2.4",
     "react": "15.4.2",
-    "react-native": "0.41.2"
+    "react-native": "0.41.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-jest": "18.0.0",
@@ -22,5 +25,6 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "snyk": true
 }
