@@ -11,7 +11,7 @@
     "@npmsoluto/tweek-rest": "^0.1.1",
     "@npmsoluto/react-tweek": "^0.2.4",
     "react": "15.4.2",
-    "react-native": "0.41.2"
+    "react-native": "0.64.1"
   },
   "devDependencies": {
     "babel-jest": "18.0.0",
